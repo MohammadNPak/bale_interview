@@ -1,0 +1,4 @@
+url/.venv
+url/db.sqlite3
+url/manage.py
+url/.vscode
