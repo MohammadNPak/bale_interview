@@ -22,7 +22,7 @@ def index(request):
         return Response(serializer.data,status=status.HTTP_400_BAD_REQUEST)
     
 
-@api_view(["POST"])
+@api_view(["GET"])
 def get_actual_url(request,url):
-    u = UrlModel.get(url)
+    u = UrlModel.objects.get(short_url=url)
     return HttpResponseRedirect(u.url)    
